@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RecyclerViewForHuman</string>
+    <string name="action_settings">Settings</string>
+    <string name="AddPeopleFragmentTitle">Add People</string>
+    <string name="AddPeopleNameInput">Enter Name</string>
+    <string name="AddPeopleAgeInput">Enter Age</string>
+    <string name="AddPeopleRadioMale">Male</string>
+    <string name="AddPeopleRadioFemale">Female</string>
+    <string name="AddPeopleSwitchPlaceholder">Love Android ? </string>
+    <string name="AddPeopleCreateBtn">CREATE</string>
+    <string name="AddPeopleCancelBtn">CANCEL</string>
+</resources>

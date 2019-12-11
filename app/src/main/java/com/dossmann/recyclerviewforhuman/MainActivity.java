@@ -7,16 +7,22 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+private RecyclerView recyclerView;
+private RecyclerView.Adapter mAdapter;
+private RecyclerView.LayoutManager layoutManager;
 
 
     @Override
@@ -34,6 +40,15 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        ArrayList<People> peopleTab = new ArrayList<People>();
+        PeopleAdapter myAdapter = new PeopleAdapter(peopleTab);
+
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView_people_list);
+        recyclerView.setAdapter(myAdapter);
+        LinearLayoutManager mylayout = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(mylayout);
     }
 
     @Override
@@ -57,5 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 
 }
